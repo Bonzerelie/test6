@@ -1,37 +1,50 @@
 body {
-  font-family: Arial, sans-serif;
-  background: white;
+  font-family: sans-serif;
+  background-color: white;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.container {
+  max-width: 480px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+#start-screen, #game-screen {
+  text-align: center;
 }
 
 .hidden {
   display: none;
 }
 
-.controls, .note-buttons {
+.start-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  padding-top: 40px;
+}
+
+.controls {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin: 20px 0;
+  margin-bottom: 20px;
 }
 
 .green-button, .blue-button {
-  padding: 12px 16px;
-  font-size: 16px;
   border: none;
+  padding: 8px 12px;
+  font-size: 16px;
   border-radius: 8px;
   cursor: pointer;
+  white-space: nowrap;
+  max-height: 40px;
+  line-height: 1.2;
 }
 
 .green-button {
@@ -40,31 +53,25 @@ body {
 }
 
 .blue-button {
-  background-color: #007BFF;
+  background-color: #2196F3;
   color: white;
 }
 
-.blue-button.correct {
-  background-color: #4CAF50;
+.correct {
+  background-color: #4CAF50 !important;
 }
 
-.blue-button.incorrect {
-  background-color: #f44336;
+.incorrect {
+  background-color: #F44336 !important;
 }
 
-#score-display {
-  margin-top: 20px;
-  font-size: 18px;
+#note-buttons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-bottom: 20px;
 }
 
-@media (max-width: 600px) {
-  .note-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .green-button, .blue-button {
-    width: 90%;
-    margin-bottom: 10px;
-  }
+.scoreboard {
+  text-align: center;
 }
