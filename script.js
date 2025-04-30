@@ -20,6 +20,7 @@ let incorrect = 0;
 
 const noteButtonsContainer = document.getElementById('note-buttons');
 const questionText = document.getElementById('question');
+questionText.style.textAlign = 'center';
 
 const correctCount = document.getElementById('correct-count');
 const incorrectCount = document.getElementById('incorrect-count');
@@ -33,6 +34,14 @@ const resetButton = document.getElementById('reset-button');
 const startButton = document.getElementById('start-button');
 const gameScreen = document.getElementById('game-screen');
 const startScreen = document.getElementById('start-screen');
+
+startButton.style.display = 'block';
+startButton.style.margin = '0 auto';
+startButton.style.textAlign = 'center';
+
+resetButton.style.display = 'block';
+resetButton.style.margin = '0 auto';
+resetButton.style.textAlign = 'center';
 
 const noteNames = Object.keys(noteMap);
 
