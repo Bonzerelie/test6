@@ -1,0 +1,70 @@
+body {
+  font-family: Arial, sans-serif;
+  background: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.controls, .note-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.green-button, .blue-button {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.green-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.blue-button {
+  background-color: #007BFF;
+  color: white;
+}
+
+.blue-button.correct {
+  background-color: #4CAF50;
+}
+
+.blue-button.incorrect {
+  background-color: #f44336;
+}
+
+#score-display {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+@media (max-width: 600px) {
+  .note-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .green-button, .blue-button {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
