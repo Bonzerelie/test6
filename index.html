@@ -7,28 +7,28 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- Start Screen -->
   <div id="start-screen">
-    <h1>The Relative Pitch Game! 🎹🎶</h1>
-    <h2>Chromatic</h2>
-    <button class="green-button" id="start-button">Start</button>
+    <h1 class="center-text">The Relative Pitch Game! 🎹🎶</h1>
+    <h2 class="center-text">Chromatic</h2>
+    <button id="start-button" class="green-button center-button">Start</button>
   </div>
 
-  <div id="game-screen" style="display:none;">
-    <h1>The Relative Pitch Game! 🎹🎶</h1>
-    <h2>Chromatic</h2>
+  <!-- Game Screen -->
+  <div id="game-screen" style="display: none;">
+    <p id="question" class="center-text">Which note was played?</p>
+
+    <div id="note-buttons"></div>
 
     <div class="controls">
-      <button class="green-button" id="play-reference">Play Reference (C4)</button>
-      <button class="green-button" id="replay-note">Replay Note</button>
-      <button class="green-button" id="next-button" disabled>Next</button>
+      <button id="play-reference" class="green-button">Play Reference (C4)</button>
+      <button id="replay-note" class="green-button">Replay Note</button>
+      <button id="next-button" class="green-button" disabled>Next</button>
     </div>
 
-    <p id="question">Which note was played?</p>
-    <div id="note-buttons" class="note-grid"></div>
+    <button id="reset-button" class="green-button center-button">Reset Score</button>
 
-    <button class="green-button" id="reset-button">Reset Score</button>
-
-    <div class="score">
+    <div id="score">
       <p>Correct: <span id="correct-count">0</span></p>
       <p>Incorrect: <span id="incorrect-count">0</span></p>
       <p>Total: <span id="total-count">0</span></p>
