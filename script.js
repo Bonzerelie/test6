@@ -84,15 +84,25 @@ function loadNextNote() {
   nextButton.disabled = true;
 }
 
+function getDisplayNameForNote(note) {
+  for (const [displayName, fileNames] of Object.entries(noteMap)) {
+    if (fileNames.includes(note)) {
+      return displayName;
+    }
+  }
+  return note; // fallback, should not happen
+}
+
 function checkAnswer(selected, button) {
+  const displayName = getDisplayNameForNote(currentNote);
   if (noteMap[selected].includes(currentNote)) {
     correct++;
     button.classList.add('correct');
-    questionText.textContent = `Correct! ✅ The note was '${currentNote}'`;
+    questionText.textContent = `Correct! ✅ The note was ${displayName}`;
   } else {
     incorrect++;
     button.classList.add('incorrect');
-    questionText.textContent = `Incorrect! ❌ The note played was actually '${currentNote}'`;
+    questionText.textContent = `Incorrect! ❌ The note played was actually ${displayName}`;
   }
   updateScore();
   disableNoteButtons();
