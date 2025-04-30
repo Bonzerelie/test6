@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relative Pitch Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="start-screen">
+    <h1>The Relative Pitch Game! 🎹🎶</h1>
+    <h2>Chromatic</h2>
+    <button class="green-button" id="start-button">Start</button>
+  </div>
+
+  <div id="game-screen" style="display:none;">
+    <h1>The Relative Pitch Game! 🎹🎶</h1>
+    <h2>Chromatic</h2>
+
+    <div class="controls">
+      <button class="green-button" id="play-reference">Play Reference (C4)</button>
+      <button class="green-button" id="replay-note">Replay Note</button>
+      <button class="green-button" id="next-button" disabled>Next</button>
+    </div>
+
+    <p id="question">Which note was played?</p>
+    <div id="note-buttons" class="note-grid"></div>
+
+    <button class="green-button" id="reset-button">Reset Score</button>
+
+    <div class="score">
+      <p>Correct: <span id="correct-count">0</span></p>
+      <p>Incorrect: <span id="incorrect-count">0</span></p>
+      <p>Total: <span id="total-count">0</span></p>
+      <p>Accuracy: <span id="accuracy">0.0%</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
