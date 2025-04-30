@@ -69,6 +69,7 @@ function loadNewNote() {
 function handleAnswer(e) {
   if (isAnswered) return;
   isAnswered = true;
+
   const selected = e.target.getAttribute('data-note');
   const correctName = getNoteName(currentNote);
 
