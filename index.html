@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relative Pitch Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="start-screen" class="centered">
+    <h1>The Relative Pitch Game! 🎹🎶</h1>
+    <p>Can you correctly identify which note is played?<br>Use the reference pitch to help!</p>
+    <button class="green-button" id="start-button">Start Game</button>
+  </div>
+
+  <div id="game-screen" class="hidden centered">
+    <h1>The Relative Pitch Game! 🎹🎶</h1>
+    <h2>Chromatic</h2>
+
+    <div class="controls">
+      <button class="green-button" id="play-reference">Play Reference (C4)</button>
+      <button class="green-button" id="replay-note">Replay Note</button>
+      <button class="green-button" id="next-button" disabled>Next</button>
+    </div>
+
+    <h3 id="prompt">Which note was played?</h3>
+
+    <div class="note-buttons">
+      <button class="blue-button" data-note="C">C</button>
+      <button class="blue-button" data-note="C#/Db">C#/Db</button>
+      <button class="blue-button" data-note="D">D</button>
+      <button class="blue-button" data-note="D#/Eb">D#/Eb</button>
+      <button class="blue-button" data-note="E">E</button>
+      <button class="blue-button" data-note="F">F</button>
+      <button class="blue-button" data-note="F#/Gb">F#/Gb</button>
+      <button class="blue-button" data-note="G">G</button>
+      <button class="blue-button" data-note="G#/Ab">G#/Ab</button>
+      <button class="blue-button" data-note="A">A</button>
+      <button class="blue-button" data-note="A#/Bb">A#/Bb</button>
+      <button class="blue-button" data-note="B">B</button>
+    </div>
+
+    <button class="green-button" id="reset-score">Reset Score</button>
+    <div id="score-display">
+      <p>Correct: <span id="correct-count">0</span></p>
+      <p>Incorrect: <span id="incorrect-count">0</span></p>
+      <p>Total: <span id="total-count">0</span></p>
+      <p>Accuracy: <span id="accuracy">0.0%</span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
